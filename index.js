@@ -23,6 +23,10 @@ function Phrase(content) {
 
   //Returns true if phrase is a palindrome, false otherwise.
   this.palindrome = function() {
-    return this.lowerCaseIt() === this.lowerCaseIt().reverse();
+    if (this.letters()) {
+      return this.lowerCaseIt() === this.lowerCaseIt().reverse();
+    } else {
+      return false;
+    }
   }
 }
